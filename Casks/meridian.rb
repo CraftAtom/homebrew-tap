@@ -19,7 +19,7 @@ cask "meridian" do
   # LSMinimumSystemVersion is Tauri's default (10.13) and Tauri v2 documents
   # 10.15, neither of which is tested. Anyone older can still take the DMG
   # from gitmeridian.com directly.
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Meridian.app"
 
