@@ -15,9 +15,11 @@ cask "meridian" do
   end
 
   auto_updates true
-  # Tauri v2's documented minimum. The bundle's own LSMinimumSystemVersion is
-  # the framework default and not a tested floor, so the cask does not repeat it.
-  depends_on macos: ">= :catalina"
+  # The oldest floor Homebrew still accepts, not a measured one: the app's own
+  # LSMinimumSystemVersion is Tauri's default (10.13) and Tauri v2 documents
+  # 10.15, neither of which is tested. Anyone older can still take the DMG
+  # from gitmeridian.com directly.
+  depends_on macos: ">= :big_sur"
 
   app "Meridian.app"
 
