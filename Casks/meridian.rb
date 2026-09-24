@@ -15,6 +15,9 @@ cask "meridian" do
   end
 
   auto_updates true
+  # Tauri v2's documented minimum. The bundle's own LSMinimumSystemVersion is
+  # the framework default and not a tested floor, so the cask does not repeat it.
+  depends_on macos: ">= :catalina"
 
   app "Meridian.app"
 
